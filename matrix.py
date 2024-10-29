@@ -12,8 +12,9 @@ https://github.com/pimoroni/unicorn-hat-hd/blob/master/examples/matrix-hd.py
 """
 
 from random import randint, gauss
-from demo_opts import get_device
 from luma.core.render import canvas
+from luma.oled.device import ssd1309
+from luca.core.interface.serial import spi
 from luma.core.sprite_system import framerate_regulator
 
 
@@ -66,6 +67,8 @@ def matrix(device):
 
 if __name__ == "__main__":
     try:
-        matrix(get_device())
+        serial = spi(bus_speed_hz=1000000)
+        device = ssd1309(serial,rotate=0)    
+        matrix(device)
     except KeyboardInterrupt:
         pass
