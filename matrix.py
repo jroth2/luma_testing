@@ -14,7 +14,7 @@ https://github.com/pimoroni/unicorn-hat-hd/blob/master/examples/matrix-hd.py
 from random import randint, gauss
 from luma.core.render import canvas
 from luma.oled.device import ssd1309
-from luca.core.interface.serial import spi
+from luma.core.interface.serial import spi
 from luma.core.sprite_system import framerate_regulator
 
 

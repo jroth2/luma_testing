@@ -7,7 +7,7 @@ import logging
 
 from luma.core import cmdline, error
 from luma.oled.device import ssd1309
-from luca.core.interface.serial import spi
+from luma.core.interface.serial import spi
 
 def get_device(actual_args=None):
     serial = spi(bus_speed_hz=1000000)
